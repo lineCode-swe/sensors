@@ -4,6 +4,15 @@
       <settings>
         <option name="imageTag" value="portacs-sensors" />
         <option name="containerName" value="portacs-sensors" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="8082" />
+              <option name="hostPort" value="8082" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="commandLineOptions" value="--network portacs-net" />
         <option name="sourceFilePath" value="Dockerfile" />
       </settings>
     </deployment>
