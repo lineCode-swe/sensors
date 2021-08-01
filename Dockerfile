@@ -1,7 +1,13 @@
-FROM NODE:16.3
+FROM node:16.3
+
+ENV NODE_ENV="production"
 
 WORKDIR /app
-COPY package*.json ./
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+COPY main.js main.js
 RUN ["npm", "ci"]
 
-EXPOSE 8081
+ENTRYPOINT ["NODE", "main.js"]
+
+EXPOSE 8082
