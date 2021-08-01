@@ -8,6 +8,6 @@ COPY package-lock.json package-lock.json
 COPY main.js main.js
 RUN ["npm", "ci"]
 
-ENTRYPOINT ["NODE", "main.js"]
-
 EXPOSE 8082
+
+ENTRYPOINT ["node", "main.js"]
