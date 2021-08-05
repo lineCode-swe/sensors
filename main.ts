@@ -43,8 +43,12 @@ wss.on('connection', function connection(ws: any) {
 });
 
 /*
-msg prototype
-{ "cmd": "add", "x": "2", "y": "4" }
-{ "cmd": "del", "x": "2", "y": "4" }
+Comando per collegarsi ai sensori e inviare informazioni => websocat ws://127.0.0.1:8082
+Prototipi di messaggio per i sensori:
+{ "cmd": "add", "x": "1", "y": "2" }
+{ "cmd": "add", "x": "3", "y": "2" }
+{ "cmd": "del", "x": "1", "y": "2" }
+{ "cmd": "del", "x": "3", "y": "2" }
+Per creare nuovi ostacoli => sostituire le coordinate x e y
 */
 
